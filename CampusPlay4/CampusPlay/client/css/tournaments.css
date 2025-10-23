@@ -1,16 +1,15 @@
-/* tournaments.css */
 :root {
-    --bg-primary: #12141D;
-    --bg-secondary: #1A1D2A;
-    --bg-tertiary: #252A3C;
-    --text-primary: #E0E0FF;
-    --text-secondary: #8A92B2;
-    --accent-primary: #5A67D8;
-    --accent-secondary: #8E44AD;
+    --bg-primary: #0A0A0A;
+    --bg-secondary: #121212;
+    --bg-tertiary: #1D1D1D;
+    --text-primary: #FFFFFF;
+    --text-secondary: #A0A0A0;
+    --accent-primary: #CD1D04;
+    --accent-secondary: #FF4500;
     --accent-gradient: linear-gradient(90deg, var(--accent-primary), var(--accent-secondary));
-    --border-color: #313852;
+    --border-color: #2D2D2D;
     --green: #2ECC71;
-    --yellow: #F1C40F;
+    --yellow: #FFC300;
 }
 
 * {
@@ -31,7 +30,6 @@ body {
     min-height: 100vh;
 }
 
-/* Sidebar Styles */
 .sidebar {
     width: 260px;
     background-color: var(--bg-secondary);
@@ -73,7 +71,7 @@ body {
 .sidebar__nav .nav-item.active {
     background-color: var(--accent-primary);
     color: #fff;
-    box-shadow: 0 4px 15px rgba(90, 103, 216, 0.3);
+    box-shadow: 0 4px 15px rgba(205, 29, 4, 0.4);
 }
 
 .sidebar__footer {
@@ -96,7 +94,6 @@ body {
     color: #fff;
 }
 
-/* Main Content Styles */
 .main-content {
     flex: 1;
     padding: 24px 32px;
@@ -178,7 +175,6 @@ body {
     color: #fff;
 }
 
-/* Game Banner */
 .game-banner {
     height: 280px;
     border-radius: 16px;
@@ -196,7 +192,7 @@ body {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(18, 20, 29, 0.9) 0%, rgba(18, 20, 29, 0) 100%);
+    background: linear-gradient(to top, rgba(10, 10, 10, 0.9) 0%, rgba(10, 10, 10, 0) 100%);
 }
 
 .banner-content {
@@ -235,7 +231,6 @@ body {
     color: var(--text-secondary);
 }
 
-/* Tournaments List */
 .tournaments-list h3 {
     font-size: 24px;
     margin-bottom: 24px;
@@ -261,7 +256,7 @@ body {
 }
 .tournament-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     border-color: var(--accent-primary);
 }
 
@@ -277,7 +272,7 @@ body {
 .card-banner-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to top, rgba(26, 29, 42, 0.8) 0%, transparent 100%);
+    background: linear-gradient(to top, rgba(18, 18, 18, 0.8) 0%, transparent 100%);
 }
 .time-left {
     position: relative;
@@ -330,10 +325,9 @@ body {
 }
 .join-button:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 15px rgba(90, 103, 216, 0.4);
+    box-shadow: 0 4px 15px rgba(205, 29, 4, 0.5);
 }
 
-/* NEW: Styles for the joined/disabled button state */
 .join-button:disabled {
     background-image: none;
     background-color: var(--bg-tertiary);
@@ -345,14 +339,31 @@ body {
 
 .card-meta {
     text-align: right;
+    padding: 20px;
 }
+
+.card-body {
+    padding: 20px;
+}
+
+.card-meta span {
+    display: block;
+    font-size: 14px;
+    color: var(--text-secondary);
+    font-weight: 600;
+    margin-top: 4px;
+}
+
+.card-meta span i {
+    margin-right: 8px;
+}
+
 .slots {
     font-size: 12px;
     color: var(--text-secondary);
     font-weight: 600;
 }
 
-/* NEW: Styles for Toast Notifications */
 .toast-container {
     position: fixed;
     top: 24px;
